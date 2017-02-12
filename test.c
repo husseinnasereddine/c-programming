@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-
+/*hello people*/
 
 int substract (int *a, int *b)
 {
