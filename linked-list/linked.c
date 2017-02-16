@@ -1,8 +1,17 @@
 #include<stdio.h>
 
-struct node {
+
+
+#define NODE 1
+typedef struct node {
 int data;
-};
+} node;
+
+
+
+
+
+
 int add ()
 {
 int a;
@@ -10,16 +19,20 @@ printf ("pelase enter a number\n");
 scanf("%d",&a);
 return a;
 }
-void display (struct node node1[10], int pos)
+
+
+
+void display (node *node1, int pos)
 {
   for(int i=0 ;i<pos; i++)
   {
-    printf("\nposition number %d: %d\n",i,node1[i].data);
+    printf("\nposition number %d: %d\n",i,(node1[i]).data);
   }
+  // a[i]=*(a+i)
 }
 int main (int argv, char *agrc[])
 {
-struct node node1[10];
+node node1[10];
 int i=0;
 int option =0;
 do{
@@ -34,7 +47,7 @@ switch(option)
   break;
 
   case 2:
-  display(node1,i);
+  display(&node1[1],i);
   break;
 
   case 3:
